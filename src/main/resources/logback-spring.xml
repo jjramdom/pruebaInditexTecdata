@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration debug="true" scan="true" scanPeriod="10 seconds">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <property name="aplicacion" value="pruebaInditex" />
+    <property name="output" value="${PROJECT.LOC}/logs" />
+    <!-- Console output -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>
+                %d{d/M/yyyy HH:mm:ss.SSS} %p [${aplicacion}] [%X{user}] [%t] [%X{session}] [%X{IP}] %m %n
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender -->
+    
+    <appender name="LOGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+        <file>${output}/${aplicacion}.log</file>
+        <encoder>
+            <Pattern>
+                %d{d/M/yyyy HH:mm:ss.SSS} %p [${aplicacion}] [%t] [%X{X-Forwarded-For}] [%C] %.2000m %n
+            </Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Daily rollover -->
+            <fileNamePattern>${output}/${aplicacion}.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="com.inditex" additivity="false">
+        <appender-ref ref="LOGFILE" />
+    </logger>
+    <logger name="org.springframework" additivity="false">
+        <appender-ref ref="LOGFILE" />
+    </logger>
+    <logger name="org.eclipse.persistence.jpa" additivity="false">
+        <appender-ref ref="LOGFILE" />
+    </logger>
+    
+    <root>
+        <appender-ref ref="LOGFILE" />
+    </root>
+
+</configuration>

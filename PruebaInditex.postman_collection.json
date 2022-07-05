@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "78341662-7a6b-403f-a999-8134d2ccb0ca",
+		"name": "PruebaInditex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19536376"
+	},
+	"item": [
+		{
+			"name": "Test1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/precios/35455/1/2020-06-14-10.00.00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"precios",
+						"35455",
+						"1",
+						"2020-06-14-10.00.00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/precios/35455/1/2020-06-14-16.00.00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"precios",
+						"35455",
+						"1",
+						"2020-06-14-16.00.00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/precios/35455/1/2020-06-14-21.00.00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"precios",
+						"35455",
+						"1",
+						"2020-06-14-21.00.00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/precios/35455/1/2020-06-15-10.00.00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"precios",
+						"35455",
+						"1",
+						"2020-06-15-10.00.00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/precios/35455/1/2020-06-16-21.00.00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"precios",
+						"35455",
+						"1",
+						"2020-06-16-21.00.00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/precios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"precios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_findByProductId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/precios/35455",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"precios",
+						"35455"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_findByProductIdAndBrandId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/precios/35455/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"precios",
+						"35455",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
